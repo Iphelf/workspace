@@ -1,4 +1,4 @@
-import sys, random, time
+﻿import sys, random, time
 from PyQt4 import QtCore, QtGui, uic
 
 qtCreatorFile = "Test.ui" # Enter file here.
@@ -54,7 +54,7 @@ def printf(list,mode=73):
     if mode == 73:
         for y in range(7):
             for x in range(10):
-                print "%2i" %(list[x+y*10]),
+                print("%2i" %(list[x+y*10]),end='')
             print
         print("%17.2i %2i %2i"%(list[70],list[71],list[72]))
 

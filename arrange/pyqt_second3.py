@@ -16,7 +16,7 @@ while(1):
     r=f.readline()
     if len(str(r))==0:
         break
-    print(r,end='')
+    print r,
     t[n]=r.split(',')
     n+=1
 t[0][0]=1
@@ -25,7 +25,7 @@ t[0][0]=1
 def cr(crt):
 	cr=list(map(lambda x:x+1,list(range(73))))
 	return cr
-saves=list(map(cr,list(range(10))))
+saves=list(map(cr,list(range(50))))
 n=0
 m=0
 class MyApp(QtGui.QMainWindow, Ui_MainWindow):
@@ -96,6 +96,8 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         
 
 # Console fuctions:
+# def swap(num1,num2):
+
 def translate(mode='e'):
     if mode=='e':
         return list(map(lambda x: x[1],t))
@@ -125,9 +127,9 @@ def printf(list,mode=73):
     if mode == 73:
         for y in range(7):
             for x in range(10):
-                print("%2i" %(list[x+y*10]),end=' ')
-            print ()
-        print("%2i %14.2i %2i"%(list[70],list[71],list[72]))
+                print "%2i" %(list[x+y*10]),
+            print '\n'
+        print "%2i %14.2i %2i"%(list[70],list[71],list[72])
 
 # Console main:
 
